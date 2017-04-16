@@ -1,0 +1,1053 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java基础," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="TinyCoder's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="此系列文章是本人学习时所做笔记，现在做一个整理，大神请略过。。。
+一、关键字
+什么是关键字： 被Java语言占用并赋予了特殊含义和作用的单词。    
+关键字的特点：  
+全部为小写。  
+被Java自身霸占，在自己定义变量、方法名、类名等时不能使用。  
+
+
+关键字的分类：  
+
+用于定义数据类型的关键字:class（类） interface（接口）byte short int long flo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础（二）：基本语法">
+<meta property="og:url" content="http://yoursite.com/blog/2016/09/03/java基础/2、java基本语法/index.html">
+<meta property="og:site_name" content="TinyCoder's Blog">
+<meta property="og:description" content="此系列文章是本人学习时所做笔记，现在做一个整理，大神请略过。。。
+一、关键字
+什么是关键字： 被Java语言占用并赋予了特殊含义和作用的单词。    
+关键字的特点：  
+全部为小写。  
+被Java自身霸占，在自己定义变量、方法名、类名等时不能使用。  
+
+
+关键字的分类：  
+
+用于定义数据类型的关键字:class（类） interface（接口）byte short int long flo">
+<meta property="og:updated_time" content="2016-09-04T11:39:50.379Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础（二）：基本语法">
+<meta name="twitter:description" content="此系列文章是本人学习时所做笔记，现在做一个整理，大神请略过。。。
+一、关键字
+什么是关键字： 被Java语言占用并赋予了特殊含义和作用的单词。    
+关键字的特点：  
+全部为小写。  
+被Java自身霸占，在自己定义变量、方法名、类名等时不能使用。  
+
+
+关键字的分类：  
+
+用于定义数据类型的关键字:class（类） interface（接口）byte short int long flo">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6325237220559029000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/blog/2016/09/03/java基础/2、java基本语法/"/>
+
+  <title> Java基础（二）：基本语法 | TinyCoder's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d0fdeb380743d1276f6f4c67559fb63f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">TinyCoder's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Stay hungry,stay foolish！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            历史
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java基础（二）：基本语法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-03T19:23:04+08:00" content="2016-09-03">
+              2016-09-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/09/03/java基础/2、java基本语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/09/03/java基础/2、java基本语法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/blog/2016/09/03/java基础/2、java基本语法/" class="leancloud_visitors" data-flag-title="Java基础（二）：基本语法">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>此系列文章是本人学习时所做笔记，现在做一个整理，大神请略过。。。</p>
+<h2 id="一、关键字"><a href="#一、关键字" class="headerlink" title="一、关键字"></a>一、关键字</h2><ol>
+<li>什么是关键字：<br> 被Java语言占用并赋予了特殊含义和作用的单词。    </li>
+<li>关键字的特点：  <ul>
+<li>全部为小写。  </li>
+<li>被Java自身霸占，在自己定义变量、方法名、类名等时不能使用。  </li>
+</ul>
+</li>
+<li><p>关键字的分类：  </p>
+<ul>
+<li>用于定义数据类型的关键字:<br>class（类） interface（接口）<br>byte short int long float double char boolean（数据类型）<br>void    </li>
+<li><p>用于定义数据类型值的关键字<br>true（真） false（假） null（空）  </p>
+</li>
+<li><p>用于定义流程控制的关键字<br>if else （条件选择）<br>switch case default（多重分支）<br>while do while for（循环）<br>break continue return （执行流程控制）  </p>
+</li>
+<li><p>用于定义访问权限修饰符的关键字<br>private（私有） protected（保护） public（公有） （什么也不写：默认）  </p>
+</li>
+<li><p>用于定义类、方法、变量修饰符的关键字<br>abstract（抽象） final（最终） static（静态） synchronized（同步）  </p>
+</li>
+<li><p>用于定义类与类、类与接口、接口与接口之间关系的关键字<br>extends（继承） implements（实现）<br>  <strong>注意：类只能单继承，但是可以多实现；接口可以多继承</strong>  </p>
+</li>
+<li><p>用于定义建立实例及引用实例，判断实例的关键字<br>new（创建） this（对象自身的引用） super（父类对象的引用） instanceof（类型判断）  </p>
+</li>
+<li><p>用于异常处理的关键字<br>try（包含可能出现异常的代码块）<br>catch（捕获到的异常）<br>finally（最终要执行的代码，一般为释放资源操作）<br>throw（抛出异常，需要new出来）<br>throws（声明异常，必须由调用者处理）   </p>
+</li>
+<li><p>用于包的关键字<br>package（包）<br>import （导包） </p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a> 
+<h2 id="二、标识符"><a href="#二、标识符" class="headerlink" title="二、标识符"></a>二、标识符</h2><ol>
+<li>什么是标识符：  <ul>
+<li>对各种变量、方法和类等命名时使用的字符序列，称为标识符。</li>
+</ul>
+</li>
+<li>标识符的命名规则：  <ul>
+<li>由字母、数字、_、$ 组成。  </li>
+<li>不能以数字开头。  </li>
+<li>严格区分大小写。  </li>
+<li>标识符最好能使别人见名知意，如要定义一个人的类，则写 public class Person{}。  </li>
+</ul>
+</li>
+</ol>
+<h2 id="三、什么是变量："><a href="#三、什么是变量：" class="headerlink" title="三、什么是变量："></a>三、什么是变量：</h2><ol>
+<li>在程序中，有一些量需要根据不同的条件进行值的改变，这些量称为变量。  </li>
+<li>程序是在计算机的内存中运行的，内存又被划分为很多的区域，每个区域都可以存储数据，<br>计算机根据数据所在区域的地址（如0X0000FF）在不停的进行数据的存储、获取与改变。<br>程序开发人员无法得知某个数据具体存储在哪个地址中，为了开发方便则出现了变量。（直观、方便使用）</li>
+<li>变量就是程序员给某个内存地址所起的名字。</li>
+</ol>
+<h2 id="四、数据类型"><a href="#四、数据类型" class="headerlink" title="四、数据类型"></a>四、数据类型</h2><ul>
+<li>数据类型的分类：<br>  数据类型可分为两大类：基本数据类型、引用数据类型。<br>  基本数据类型：  </li>
+</ul>
+<ul>
+<li>数字型：  </li>
+<li>整数类型：byte short int long </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>占用1字节</td>
+<td>-128~127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>占用2字节</td>
+<td>-32768~32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td>占用4字节</td>
+<td>-2147483648~2147483647</td>
+</tr>
+<tr>
+<td>long</td>
+<td>占用8字节</td>
+<td>-9223372036854775808~9223372036854775807</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>浮点类型：float double  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>占用4字节</td>
+</tr>
+<tr>
+<td>double</td>
+<td>占用8字节</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>字符型：<br>(无符号，用来表示单个字符，如’a’、’辉’、’6’等)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>占用2字节</td>
+<td>0~65535</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>布尔型：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>占用1bit</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>引用数据类型：<ul>
+<li>字符串型：<br>String   存储一串字符，如”Hello world”、”你好”等。</li>
+<li>对象等的引用<br>Object obj = new Object();</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>整数（byte short int long）<br>  整数是按照在内存中的大小进行划分的，其中最常用的为int。  </li>
+<li>浮点数（float double）<br>  浮点数是按照精确度的高低来进行划分的，其中double的精确度高，默认的浮点数类型为double。  </li>
+<li>字符型（char）<br>  表示单个字符，取值范围为0~65535，可以表示出全部的unicode编码表里的字符。<br>  在0-127范围内,char和byte/short/int/long之间可以互相转换（因为这些数据类型的取值在0-127重叠）  </li>
+<li>字符串型（String）<br>  String其实为java.lang包里的一个类，且被final修饰不能被继承。<br>  字符串是常量；它们的值在创建之后不能更改。字符串缓冲区支持可变的字符串。因为 String 对象是不可变的，所以可以共享。（JDK说明文档）</li>
+<li>常量<br>  常量是长久不会改变的量，如 1 、 3.1425926 、Hello 、辉 等都属于常量。<br>  整数常量的默认数据类型为    int      如果常量的值超过了int范围则需要定义如下：long ln = 999999999999999L;<br>  浮点数常量的默认数据类型为  double   如果需要将浮点数常量定义为float类型则需要定义如下： float fl = 3.1415F;   </li>
+</ul>
+<h2 id="五、变量的使用："><a href="#五、变量的使用：" class="headerlink" title="五、变量的使用："></a>五、变量的使用：</h2><p>使用步骤：（定义 赋值 使用）  </p>
+<ol>
+<li>定义：格式   数据类型 变量名; 如：int i;  </li>
+<li>赋值：格式   变量名 = 数据;   如：i = 10;              </li>
+<li>使用：可以将变量进行运算、比较、输出等操作。<br> 如：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">i += <span class="number">2</span>;  i &gt; <span class="number">5</span>;  </div><div class="line">System.out.println(i);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="六、算术运算符"><a href="#六、算术运算符" class="headerlink" title="六、算术运算符"></a>六、算术运算符</h2><ol>
+<li><p>算数运算符有（+ - * / % ++ –）</p>
+<ul>
+<li>其中-、*、/与数学运算上的含义和用法基本一样。  </li>
+<li><p>+运算符除有数学运算上的含义和用法外，还可做连接符，用于连接字符串、数字、字符等。<br>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">System.out.print(<span class="number">5</span>+<span class="number">5</span>);                  <span class="comment">//输出结果为:10</span></div><div class="line">   System.out.print(<span class="string">"Hello world!"</span>+<span class="number">5</span>);     <span class="comment">//输出结果为:Hello world!5</span></div><div class="line">System.out.print(<span class="number">1</span>+<span class="number">6</span>+<span class="string">"55"</span>);             <span class="comment">//输出结果为:755</span></div></pre></td></tr></table></figure>
+<p>++为自增运算符，分为前++和后++，其中前++是先进行+1运算后进行其他操作，后++是先进行其他操作后+1。<br>  例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = <span class="number">10</span>;</div><div class="line">System.out.print(i);     <span class="comment">//输出结果为:10</span></div><div class="line">System.out.print(i++);   <span class="comment">//输出结果为:10</span></div><div class="line">System.out.print(i);     <span class="comment">//输出结果为:11</span></div><div class="line">System.out.print(++i);   <span class="comment">//输出结果为:12</span></div></pre></td></tr></table></figure>
+<p>–与++类似进行减1操作。</p>
+</li>
+</ul>
+</li>
+<li><p>在Java中,同类型的两个数据运算后的结果也必须是同类型。</p>
+</li>
+</ol>
+<h2 id="七、赋值运算符（-）"><a href="#七、赋值运算符（-）" class="headerlink" title="七、赋值运算符（=）"></a>七、赋值运算符（=）</h2><ol>
+<li>= 为赋值运算符，不是数学上的等于。</li>
+<li>= 可以跟算术运算符进行组合使用。如：+=、-+、*=、/=、%=</li>
+<li>如果一行代码中有多种运算,那么 = 最后进行。</li>
+</ol>
+<h2 id="八、比较运算符（-gt-lt-gt-lt-）"><a href="#八、比较运算符（-gt-lt-gt-lt-）" class="headerlink" title="八、比较运算符（ &gt;   &lt;   ==   &gt;=   &lt;=   != ）"></a>八、比较运算符（ &gt;   &lt;   ==   &gt;=   &lt;=   != ）</h2><ul>
+<li><p>比较运算符的结果为boolean型，只有true或false两种结果。</p>
+</li>
+<li><p>注意位运算符：<br><strong>&lt;&lt;</strong> 左移运算（相当于乘以2）<br><strong>&gt;&gt;</strong> 右移运算（相当于除以2）<br><strong><em>&gt;&gt;&gt;</em></strong> 无符号右移（空位补零）</p>
+</li>
+</ul>
+<h2 id="九、逻辑运算符-关系运算符-（-amp-amp-amp-）"><a href="#九、逻辑运算符-关系运算符-（-amp-amp-amp-）" class="headerlink" title="九、逻辑运算符(关系运算符)（ &amp;   &amp;&amp;   |   ||   !    ^ ）"></a>九、逻辑运算符(关系运算符)（ &amp;   &amp;&amp;   |   ||   !    ^ ）</h2><ol>
+<li>逻辑运算符结果为boolean型，只有true或false两种结果。</li>
+<li>&amp;  &amp;&amp;   与     两边同true才为true，只要有一个false则为false。其中 &amp;&amp; 左边为false则不需要判断右边。</li>
+<li>|  ||   或     两边同false才为false，只要有一个true则为true。其中 || 左边为true则不需要判断右边。</li>
+<li>！      非     取反操作。 ！ture == false。</li>
+<li>^       异或   异或跟或只有一个差别:前后都是true,结果反而是false。</li>
+</ol>
+<h2 id="十、条件运算-三元运算"><a href="#十、条件运算-三元运算" class="headerlink" title="十、条件运算(三元运算)"></a>十、条件运算(三元运算)</h2><ol>
+<li><p>格式： (条件表达式) ? 表达式1 : 表达式2 ;<br> 其中条件表达式的值必须为boolean型，且条件运算一定有结果。</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取两个数值的最大值</span></div><div class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> b = <span class="number">2</span>;</div><div class="line"><span class="keyword">int</span> max = a &gt; b ? a : b;</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行的流程：<br> 首先判断条件表达式的值，如果条件表达式值为true则运算结果为表达式1的值，如果条件表达式值为false则运算结果为表达式2的值。</p>
+</li>
+<li>运用： 条件运算一般用来求最值  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> b = <span class="number">20</span>;</div><div class="line"><span class="keyword">int</span> c = <span class="number">30</span>;</div><div class="line"><span class="keyword">int</span> max = a;</div><div class="line">max = (max &gt; b) ? max : b ;</div><div class="line">max = (max &gt; c) ? max : c ;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="十一、数据类型转换"><a href="#十一、数据类型转换" class="headerlink" title="十一、数据类型转换"></a>十一、数据类型转换</h2><ol>
+<li>在Java中,只能进行同类型的运算,同类型的两个数据运算后的结果也必须是同类型。  </li>
+<li><p>自动类型转换<br> Java在进行数据运算时会进行数据类型自动转换：<br> 小范围会自动往大范围转换    低精度会自动往高精度转换<br> 在运算时自动类型转换为：byte,short,char –&gt; int –&gt; long –&gt; float –&gt; double  </p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (Java中整数的默认数据类型为int型，按道理这句赋值语句编译时会报错，但Java存在常量优化机制，10在-128~127之间所以可以存进byte型变量里，所以编译通过)</span></div><div class="line"><span class="keyword">byte</span> b1 = <span class="number">10</span>;</div><div class="line"><span class="comment">// 这条语句编译时会报错，因byte型数据在运算时自动转换为int型，10默认为int型，计算结果为int型，不能将int型变量存入byte型变量，会造成丢失精度。</span></div><div class="line"><span class="keyword">byte</span> b2 = b1 + <span class="number">10</span>; </div><div class="line"><span class="comment">// 这条语句是正确的   </span></div><div class="line"><span class="keyword">int</span> b3 = b1 + <span class="number">10</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>强制类型转换</p>
+<p> Java只会自动的将数据从小范围转换为大范围，低精度转换为高精度，不能反向转换，为了能反向转换，Java提供了强制类型转换。<br> 如须将int型变量转换为short型变量，则为：   </p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = <span class="number">10</span>;  </div><div class="line"><span class="keyword">short</span> s = (<span class="keyword">short</span>)i;  </div><div class="line"><span class="comment">// 强制类型转换会造成数据不准确（丢失精度）。</span></div><div class="line"><span class="keyword">short</span> s1 = (<span class="keyword">short</span>)(i + <span class="number">10</span>);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="十二、注意"><a href="#十二、注意" class="headerlink" title="十二、注意"></a>十二、注意</h2><ul>
+<li><p>常量优化机制</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> b = <span class="number">3</span>;       <span class="comment">//正确  常量优化机制</span></div><div class="line"><span class="keyword">int</span> x = <span class="number">3</span>;</div><div class="line">b = x;            <span class="comment">//错误  正确为 b = (byte) x; //丢失精度</span></div></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> b1 = <span class="number">3</span>,b2 = <span class="number">4</span>,b;</div><div class="line">b = b1 + b2;      <span class="comment">//错误  在运算时byte,short,char类型变量都被自动转换为int型，int型不能赋值给byte型  正确为 b = (byte) (b1 + b2);</span></div><div class="line">b = <span class="number">3</span> + <span class="number">4</span>;        <span class="comment">//正确  常量优化机制</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>注意：+= -= *= /= 特殊:本身有强制类型转换的作用</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">short</span> s = <span class="number">1</span>;</div><div class="line">s = s + <span class="number">1</span>;        <span class="comment">//错误   在运算时byte,short,char类型变量都被自动转换为int型，int型不能赋值给byte型  正确为 s = (short) (s + 1);</span></div><div class="line"><span class="keyword">short</span> s = <span class="number">1</span>;</div><div class="line">s += <span class="number">1</span>;           <span class="comment">//正确   相当于： s = (short) (s + 1);</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java基础/" rel="tag">#Java基础</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/09/02/java基础/1、java基本概念/" rel="next" title="Java基础（一）：基本概念">
+                <i class="fa fa-chevron-left"></i> Java基础（一）：基本概念
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/09/04/java基础/3、java流程控制/" rel="prev" title="Java基础（三）：基本语法">
+                Java基础（三）：基本语法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c81ba567033b8d" async = "async" ></script>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="blog/2016/09/03/java基础/2、java基本语法/"
+           data-title="Java基础（二）：基本语法" data-url="http://yoursite.com/blog/2016/09/03/java基础/2、java基本语法/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars0.githubusercontent.com/u/19600384?v=3&s=460"
+               alt="TinyCoderWang" />
+          <p class="site-author-name" itemprop="name">TinyCoderWang</p>
+          <p class="site-description motion-element" itemprop="description">求知若饥，大智若愚！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/TinycoderWang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、关键字"><span class="nav-text">一、关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、标识符"><span class="nav-text">二、标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、什么是变量："><span class="nav-text">三、什么是变量：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、数据类型"><span class="nav-text">四、数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、变量的使用："><span class="nav-text">五、变量的使用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、算术运算符"><span class="nav-text">六、算术运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、赋值运算符（-）"><span class="nav-text">七、赋值运算符（=）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、比较运算符（-gt-lt-gt-lt-）"><span class="nav-text">八、比较运算符（ >   <   ==   >=   <=   != ）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、逻辑运算符-关系运算符-（-amp-amp-amp-）"><span class="nav-text">九、逻辑运算符(关系运算符)（ &   &&   |   ||   !    ^ ）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、条件运算-三元运算"><span class="nav-text">十、条件运算(三元运算)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、数据类型转换"><span class="nav-text">十一、数据类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、注意"><span class="nav-text">十二、注意</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TinyCoderWang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tinycoderwang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("kEdCo9zm7wGH31XplS204Amm-gzGzoHsz", "5Ga5mK6uCQtwSlOn2SxfrNEt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
